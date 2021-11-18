@@ -1,0 +1,172 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage[absolute]{textpos}
+    \usepackage[UKenglish]{babel}
+    \usepackage[UKenglish]{isodate}
+    \usepackage[dvipsnames]{xcolor}
+    \usepackage{titlesec}
+    \usepackage{fontawesome}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Aubin Mazet}}\\
+	Paris, France $\cdot$ mazetaubin@gmail.com $\cdot$ +33649282124 $\cdot$ https://www.linkedin.com/in/aubin-mazet/\\
+\end{center}
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Language:         & Python, Scala, SQL, R                                                                        \\
+	Big Data:                     & Spark, Cloud (Azure, AWS), Kubernetes                                                \\
+	Data Science:                 & Time Series (forecast, anomaly detection), Generative models (GAN, VAE, GPT3)   \\
+	ML Engineering:               & MLOps, DevOps (CI/CD, infra-as-code), APIs \\
+	Project Management:           & Agile methods, Management consulting, Data strategy                                              \\
+\end{tabular}
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Quantmetry} \hfill Paris, France\\
+\textit{ML Engineer - Data Engineer} \hfill Sep 2019 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item{\bf Sports retailer - Data Engineer}\\
+	- Developed and industrialized daily ETL jobs on billion rows in Spark Scala \\
+    - Developed Airflow pipelines to create transient EMR clusters and orchestrate spark jobs\\
+    - Developed CI/CD pipelines to build, test and deploy spark jobs on different environments \\
+    {\sl Scala, AWS, Airflow}\\
+	\item {\bf Testing, inspection and certification (TIC) - Data Engineer} \\
+	-  Deployed a state-of-the-art big data platform based on a microservices architecture (Kubernetes, Spark, Airflow, Jupyterhub, Gitlab CI, Minio, Helm, Delta) \\
+    - Developed ETL spark jobs for processing data \\
+    - Set-up Airflow on K8S to launch and orchestrate spark jobs \\
+    {\sl Scala, Kubernetes, Airflow}\\
+    \item {\bf Pharmaceutical industry - Data Engineer} \\
+    - Developed a streaming pipeline to ingest transactions based on an event-driven architecture \\
+    - Deployed and optimized a distributed PostgreSQL database to handle real-time analytical queries on more than 5 billions rows)\\
+    {\sl Python, Azure, PostgreSQL}\\
+    \item {\bf Water and waste management - Machine Learning Engineer} \\
+    - Industrialized a predictive maintenance model with K8S to serve models prediction to several plants  \\
+    - Developed a MLOps Python template to industrialize machine learning models on Azure  \\
+    - Trained and up-skilled data scientists on DevOps and clean code.  \\
+    {\sl Python, Azure Machine Learning, AKS}\\
+    \item {\bf Food industry - Machine Learning Engineer} \\
+    - Developed a digital twin offering real-time piloting recommendations based on sensor data. \\
+    - Industrialised the model and the data ingestion pipeline on Azure using serverless resources  \\
+    - Developed CI/CD pipelines to deploy the application and the infrastructure \\
+    {\sl Python, R, Azure}
+\end{itemize}
+\textbf{Air France KLM} \hfill Paris, France\\
+\textit{Data Scientist} \hfill Sep 2018 - Sep 2019\\
+\begin{itemize} \itemsep 1pt
+
+    \item {\bf Fraud detection on credit cards, loyalty programs, flight bookings}\\
+    - Deep learning: CNN, variational autoencoders, entity embeddings in NN\\
+    - Graph database (Neo4J)\\
+
+    \item {\bf Revenue forecasting for finance department}\\
+    - Machine learning: boosted trees, time series models \\
+    - Creation of visualization tools with Flask and Spotfire \\
+\end{itemize}
+
+
+%==== Education ====%
+\header{Education}
+\textbf{Paris Dauphine University}\hfill Paris, France\\
+Master\textquotesingle{}s degree Finance \hfill Sep 2016 - Sep 2019\\
+\textbf{Lund University}\hfill Lund, Sweden\\
+Semester Exchange \hfill Sep 2017 - Fev 2018\\
+\vspace{2mm}
+
+
+\header{Projects}
+{\textbf{Spark-Airflow-on-K8S}} {\sl Helm, Spark, Kubernetes, Airflow} \hfill https://github.com/aubinmazet/spark-airflow-on-K8S\\
+Starter kit to run spark jobs with Airflow on Kubernetes\\
+\vspace*{2mm}
+{\textbf{Common Readability Kaggle}} {\sl Python, HuggingFace, Tensorflow} \hfill https://github.com/aubinmazet/common-readability-kaggle\\
+Kaggle challenge to evaluate the readability of a text\\
+\vspace*{2mm}
+
+\header{Certifications}
+\textbf{Microsoft Certified - Azure Data Engineer Associate}\\
+Credential ID : H414-8260
+\hfill May 2020\\
+\textbf{Deep Learning Certification - deeplearning.ai}\\
+Credential ID : ZSG3A9HA8AYY
+\hfill Sep 2019\\
+\vspace*{2mm}
+
+\ 
+\end{document}
