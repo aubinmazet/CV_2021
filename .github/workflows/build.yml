@@ -26,7 +26,7 @@ jobs:
       with:
         root_file: ./file.tex
     - name: Renaming File
-      run: mv main.pdf CV_AubinMazet_EN.pdf
+      run: mv file.pdf CV_AubinMazet_EN.pdf
     - name: Push
       uses: github-actions-x/commit@v2.6
       with:
