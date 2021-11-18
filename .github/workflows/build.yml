@@ -24,7 +24,7 @@ jobs:
     - name: LaTeX compilation
       uses: dante-ev/latex-action@latest
       with:
-        root_file: file.tex
+        root_file: $GITHUB_WORKSPACE/file.tex
         args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
     - name: Renaming File
       run: mv main.pdf CV_AubinMazet_EN.pdf
