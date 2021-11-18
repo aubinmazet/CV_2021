@@ -23,8 +23,8 @@ jobs:
       uses: actions/checkout@v2
     - name: LaTeX compilation
       uses: xu-cheng/latex-action@v2
-        with:
-          root_file: ./file.tex
+      with:
+        root_file: ./file.tex
     - name: Renaming File
       run: mv main.pdf CV_AubinMazet_EN.pdf
     - name: Push
